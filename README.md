@@ -1,97 +1,35 @@
-# kgbot Version 2.0 By kgproject1010™
+<h1 align="center"><img src="./resources/extras/kenn.gif" width="20px">    KG - USERBOT    <img src="https://images.cooltext.com/5545012.gif" width="20px"></h1>
 
-# <p align="left"><a href="https://github.com/kgproject1010/kgbot"><img src="https://github-readme-stats.vercel.app/api/pin?username=kgproject1010&show_icons=true&theme=dark&hide_border=true&repo=kgbot"></a></p><p align="centre"><a href="https://t.me/kgbot">
+![KG-UBOT Logo](https://telegra.ph/file/de901eba4b8f4e3438ed2.jpg)
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-
-
-Best UserBot To Manage Your Telegram Account 
-
-
-## Stable, Fast , Safe, Better And Most Trusted
-
-
-## © By Team #ThunderGᴀɴɢ™
-<img src="https://telegra.ph/file/d8debedf797a5c00a7844.png" alt="THUNDER USERBOT">
-
-## For any query or want to know how it works join our Channel and Support Group 
-
-<a href="https://t.me/kgbot"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-<a href="https://t.me/kgbotchat"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
-
-## ----------------- Don't Forget To Give A Star ⭐ -----------------
-
-## IF YOU WILL FORK THEN YOU WOULDN'T GET NEW UPDATES !!
-## Tutorials
-- Tutorial for how to signup free on heroku for kgbot can be found [here](https://youtu.be/x1U0a0_sBe8)
+<p align="center">
+    <a href="https://github.com/AlexdwiProject/MEONG-UBOT/commits/MEONG-UBOT"><img src="https://img.shields.io/github/last-commit/MEONGProject/MEONG-UBOT?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
+    <a href="https://github.com/AlexdwiProject/MEONG-UBOT"> <img src="https://img.shields.io/github/repo-size/AlexdwiProject/MEONG-UBOT?logo=github&style=for-the-badge" /></a>
+    <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
+    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-purple?style=for-the-badge&logo=appveyor"/>
+    </p>
+    
 
 
+<h3 align="center">KG-UBOT DIBUAT KARENA ISENG DOANG.</h3>
+<p align="center">&nbsp;</p>
+
+### Repo KG-UBOT
+Repo Yang Dibuat Oleh [KG](https://t.me/knsgnwn) 
 
 
-## Deploy kgbot To Heroku
+### Generate String Using Replit⤵️
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kgproject1010/kgbotheroku6)
-
-
-## Telegram String-Session Generator By kgproject1010™
-
-[![Run on Repl.it](https://repl.it/badge/github/kgproject1010/kgbot)](https://repl.it/@deadanonymous/kgproject1010#main.py)
-
-## kgbot's Gitbook By kgproject1010™
-
-<img src="https://telegra.ph/file/16df41fe13ab10d5b7b1b.png" alt="">
-
-Go and read it from [here](https://kgproject1010.gitbook.io/kgbot/)
+[![KEN-UBOT-STRING](https://replit.com/badge/github/@KennedyProject/KEN-UBOT)](https://replit.com/@KennedyProject/KEN-UBOT-STRING)
 
 
-## Contributors
-[Go here](https://github.com/kgproject1010/kgbot/graphs/contributors)
+## DEPLOY TO HEROKU <img src="./resources/extras/KGpurple.gif" width="40px">
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/kgproject1010/kgbot/tree/KEN-UBOT"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
 
 
-## Manually Deploying or Hosting Own
-
-Simply clone the repository and run the main file:
-
-```bash
-git clone https://github.com/kgproject1010/kgbot
-cd kgbot
-virtualenv -p /usr/bin/python3 venv
-. ./venv/bin/activate
-pip install -r requirements.txt
-# <Create local_config.py with variables as given below>
-python3 -m kgbot
-```
-
-An example `local_config.py` file could be:
-
-**Not All of the variables are mandatory**
-
-**The Userbot should work by setting only the first two variables**
-
-```python3
-from heroku_config import Var
-
-class Development(Var):
-  APP_ID = 6
-  # 6 is the length of api id
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
-  # Use Your Own Api Hash these are just for example
-```
+  <b>© Credits</b></summary>
 
 
-## Mandatory Vars
-
-- Only two of the environment variables are mandatory.
-- This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
-  - `APP_ID`: You can get this value from https://my.telegram.org
-  - `API_HASH`: You can get this value from https://my.telegram.org
-- The userbot will not work without setting the mandatory vars.
-
-# Licence
-
- [This program is licensed under GNU Affero General Public License v3.0.](https://github.com/kgproject1010/kgbot/blob/main/LICENSE)
-You cannot use this without the permission of It's Owner or kgproject1010. If we find anyone breaking the rules and not following the licence then we can take any strict actions against them.
-
-# WALL OF SHAME
-
-Wall of Shame current some winners are [here](https://t.me/kgbot/53)
+ <img src="./resources/extras/Kenpurple.gif" width="40px"> **THANK YOU VERY MUCH FOR**
+*   [Kennedy](https://github.com/KennedyProject/KEN-UBOT)    Ken - Userbot
+*   [Apis](https://github.com/apisuserbot)
