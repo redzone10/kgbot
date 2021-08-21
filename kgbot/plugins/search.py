@@ -10,7 +10,7 @@ from kgbot.utils import admin_cmd
 @kgbot.on(admin_cmd(outgoing=True, pattern=r"go (.*)"))
 @kgbot.on(sudo_cmd(allow_sudo=True, pattern=r"go (.*)"))
 async def gsearch(q_event):
-    """ For .google command. """
+    """For .google command."""
     match = q_event.pattern_match.group(1)
     page = findall(r"page=\d+", match)
     try:
@@ -68,7 +68,9 @@ async def _(event):
     if response_api:
         await eor(
             event,
-            "[{}]({})\n`Spoonfeeding you kid. kgbot⚡️` ".format(input_str, response_api.rstrip()),
+            "[{}]({})\n`Spoonfeeding you kid. kgbot⚡️` ".format(
+                input_str, response_api.rstrip()
+            ),
         )
     else:
         await eor(event, "Some Error Came. Please Try Again Later.")

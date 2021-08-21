@@ -90,9 +90,7 @@ async def unload(event):
         await event.edit(f"kgbot has successfully unloaded {shortname}")
     except Exception as e:
         await event.edit(
-            "kgbot has successfully unloaded {shortname}\n{}".format(
-                shortname, str(e)
-            )
+            "kgbot has successfully unloaded {shortname}\n{}".format(shortname, str(e))
         )
 
 

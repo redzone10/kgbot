@@ -1,10 +1,11 @@
-from telethon import events
-from kgbot import CMD_HELP
 import asyncio
+
+from telethon import events
+
+from kgbot import CMD_HELP
 
 
 @kgbot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
-
 async def _(event):
 
     if event.fwd_from:
@@ -22,16 +23,15 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-        
             "You Triggered Me Up",
             "I Am kgbot",
             "kg",
             "Feel",
-            "Feel The",    
+            "Feel The",
             "Feel The kg",
             "⛈",
             "⚡️",
-            "⚡️"
+            "⚡️",
         ]
 
         for i in animation_ttl:
@@ -39,8 +39,6 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 100])
-CMD_HELP.update(
-    {
-        "kg": "➟ `.kg`\nUse - Feel The kg"
-    }
-)
+
+
+CMD_HELP.update({"kg": "➟ `.kg`\nUse - Feel The kg"})

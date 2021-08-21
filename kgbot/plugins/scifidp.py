@@ -3,10 +3,12 @@ import os
 import random
 import re
 import urllib
+
 import requests
 from telethon.tl import functions
-from kgbot.utils import admin_cmd
+
 from kgbot import CMD_HELP
+from kgbot.utils import admin_cmd
 
 COLLECTION_STRING = [
     "star-wars-wallpaper-1080p",
@@ -35,7 +37,7 @@ async def scifipp():
         )
 
     r = requests.get(fy, allow_redirects=True)
-    open('kgbotautopic.jpg', 'wb').write(r.content)
+    open("kgbotautopic.jpg", "wb").write(r.content)
 
 
 @kgbot.on(admin_cmd(pattern="scidp ?(.*)"))

@@ -46,5 +46,7 @@ async def autopic(event):
 
 
 CMD_HELP.update(
-    {"automaticpic": ".autopic <reply to pic>\nUse - Automatic changing Profile Picture with time and date."}
+    {
+        "automaticpic": ".autopic <reply to pic>\nUse - Automatic changing Profile Picture with time and date."
+    }
 )

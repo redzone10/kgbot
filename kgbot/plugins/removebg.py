@@ -61,9 +61,7 @@ async def _(event):
         ms = (end - start).seconds
         await eor(
             event,
-            "Removed that Background in {} seconds,".format(
-                ms
-            ),
+            "Removed that Background in {} seconds,".format(ms),
         )
     else:
         await eor(

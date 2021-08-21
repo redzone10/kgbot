@@ -18,7 +18,6 @@ r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
 
-
 @kgbot.on(admin_cmd(pattern="tspam"))
 @kgbot.on(sudo_cmd(pattern="tspam", allow_sudo=True))
 async def tmeme(e):

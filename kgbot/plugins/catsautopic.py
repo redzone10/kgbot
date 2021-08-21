@@ -3,8 +3,10 @@ import os
 import random
 import re
 import urllib
+
 import requests
 from telethon.tl import functions
+
 from kgbot import CMD_HELP
 
 COLLECTION_STRING = [
@@ -17,7 +19,6 @@ COLLECTION_STRING = [
 
 
 async def meowkgproject1010():
-
 
     rnd = random.randint(0, len(COLLECTION_STRING) - 1)
     pack = COLLECTION_STRING[rnd]
@@ -35,7 +36,7 @@ async def meowkgproject1010():
             "f.ttf",
         )
     r = requests.get(fy, allow_redirects=True)
-    open('kgbotautopic.jpg', 'wb').write(r.content)
+    open("kgbotautopic.jpg", "wb").write(r.content)
 
 
 @kgbot.on(admin_cmd(pattern="meowpfp"))
@@ -51,9 +52,11 @@ async def main(event):
         file = await event.client.upload_file("kgbotautopic.jpg")
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf kgbotautopic.jpg")
-        await asyncio.sleep(600)  
+        await asyncio.sleep(600)
 
 
 CMD_HELP.update(
-    {"catsautopic": "➟ `.meowpfp`\nSelects Randomly A Cute Cat Pic And Sets As Your Profile Picture.."}
+    {
+        "catsautopic": "➟ `.meowpfp`\nSelects Randomly A Cute Cat Pic And Sets As Your Profile Picture.."
+    }
 )

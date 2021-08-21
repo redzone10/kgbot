@@ -1,6 +1,8 @@
 import os
 import textwrap
+
 from PIL import Image, ImageDraw, ImageFont
+
 from kgbot import CMD_HELP
 from kgbot.utils import admin_cmd
 

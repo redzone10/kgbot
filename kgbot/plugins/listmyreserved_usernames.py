@@ -17,6 +17,6 @@ async def _(event):
 
 CMD_HELP.update(
     {
-          "listmyreserved_usernames": ".listmyusernames\nUse - Shows all usernames you have reserved."
+        "listmyreserved_usernames": ".listmyusernames\nUse - Shows all usernames you have reserved."
     }
 )

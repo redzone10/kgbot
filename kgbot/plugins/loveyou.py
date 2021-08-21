@@ -2,16 +2,12 @@
 Command:
 .loveyou  """
 
-from telethon import events
-
 import asyncio
 
-
-
+from telethon import events
 
 
 @kgbot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
-
 async def _(event):
 
     if event.fwd_from:
@@ -29,12 +25,11 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-        
             "`I want to tell you something🙂🙂`",
             "`Wait i am Shying😅`",
             "`I `",
             "`I H `",
-            "`I HA `",    
+            "`I HA `",
             "`I HAT`",
             "`I HATE `",
             "`I LOVE YOU😋😘`",
@@ -44,7 +39,7 @@ async def _(event):
             "`I LOVE YOU🧡🖤🧡🖤`"
             "`I LOVE YOU🖤🧡🖤🧡`"
             "`I LOVE YOU🧡🖤🧡🖤`"
-            "`I LOVE YOU🖤🧡🖤🧡`"
+            "`I LOVE YOU🖤🧡🖤🧡`",
         ]
 
         for i in animation_ttl:

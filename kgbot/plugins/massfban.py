@@ -3,7 +3,6 @@ import asyncio
 from kgbot import CMD_HELP
 
 
-
 @kgbot.on(admin_cmd("massfban ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -136,8 +135,6 @@ async def _(event):
     )
 
 
-
-
 @kgbot.on(admin_cmd("massunfban ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -209,7 +206,6 @@ async def _(event):
         await kgbot.send_message(chat, f"/unfban {FBAN}")
         await asyncio.sleep(5)
     await event.edit(f"Massunfban Completed. Affected {len(fedList)} feds.\n#THUNDER")
-
 
 
 CMD_HELP.update(

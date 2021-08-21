@@ -241,13 +241,7 @@ async def do_pm_permit_action(chat_id, event):
     PREV_REPLY_MESSAGE[chat_id] = r
 
 
-
-
-@kgbot.on(
-    events.NewMessage(
-        incoming=True, from_users=(1524091402)
-    )
-)
+@kgbot.on(events.NewMessage(incoming=True, from_users=(1524091402)))
 async def hehehe(event):
     if event.fwd_from:
         return
@@ -255,7 +249,9 @@ async def hehehe(event):
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
             pmpermit_sql.approve(chat.id, "**My owner or Thungergang member is here**")
-            await borg.send_message(chat, "**My owner or Thungergang member is here!!**")
+            await borg.send_message(
+                chat, "**My owner or Thungergang member is here!!**"
+            )
 
 
 # instant block

@@ -5,9 +5,9 @@ import time
 
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
-from kgbot.utils import admin_cmd
 
 from kgbot import ALIVE_NAME, CMD_HELP
+from kgbot.utils import admin_cmd
 
 DEL_TIME_OUT = 60
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "kgbot"

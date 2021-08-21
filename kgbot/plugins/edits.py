@@ -1,58 +1,64 @@
-from telethon import events
 import asyncio
 from collections import deque
-from kgbot.utils import admin_cmd
+
 from kgbot import CMD_HELP
+from kgbot.utils import admin_cmd
+
 
 @kgbot.on(admin_cmd(pattern=r"candy"))
 async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
-	for _ in range(999):
-		await asyncio.sleep(1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
-    
+    if event.fwd_from:
+        return
+    deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
+    for _ in range(999):
+        await asyncio.sleep(1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
+
 @kgbot.on(admin_cmd(pattern=r"nothappy"))
 async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("😁☹️😁☹️😁☹️😁"))
-	for _ in range(999):
-		await asyncio.sleep(1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
+    if event.fwd_from:
+        return
+    deq = deque(list("😁☹️😁☹️😁☹️😁"))
+    for _ in range(999):
+        await asyncio.sleep(1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
 
 @kgbot.on(admin_cmd(pattern=r"heart"))
 async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("❤️🧡💛💚💙💜🖤"))
-	for _ in range(999):
-		await asyncio.sleep(1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
-    
+    if event.fwd_from:
+        return
+    deq = deque(list("❤️🧡💛💚💙💜🖤"))
+    for _ in range(999):
+        await asyncio.sleep(1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
+
 @kgbot.on(admin_cmd(pattern=r"tlol"))
 async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("🤔🧐🤨🤔🧐🤨"))
-	for _ in range(999):
-		await asyncio.sleep(1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
-    
+    if event.fwd_from:
+        return
+    deq = deque(list("🤔🧐🤨🤔🧐🤨"))
+    for _ in range(999):
+        await asyncio.sleep(1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
+
 @kgbot.on(admin_cmd(pattern=r"lol"))
 async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("😂🤣😂🤣😂🤣"))
-	for _ in range(999):
-		await asyncio.sleep(1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
+    if event.fwd_from:
+        return
+    deq = deque(list("😂🤣😂🤣😂🤣"))
+    for _ in range(999):
+        await asyncio.sleep(1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
 
 @kgbot.on(admin_cmd(pattern=r"lmoon"))
 async def _(event):
@@ -62,23 +68,22 @@ async def _(event):
     animation_ttl = range(0, 32)
     await event.edit("moon")
     animation_chars = [
-
-            "🌗🌗🌗🌗🌗\n🌓🌓🌓🌓🌓\n🌗🌗🌗🌗🌗\n🌓🌓🌓🌓🌓\n🌗🌗🌗🌗🌗",
-            "🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘",    
-            "🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑",
-            "🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒",
-            "🌓🌓🌓🌓🌓\n🌓🌓🌓🌓🌓\n🌓🌓🌓🌓🌓\n🌗🌗🌗🌗🌗\n🌓🌓🌓🌓🌓",
-            "🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔",
-            "🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕",
-            "🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖"
-        ]
+        "🌗🌗🌗🌗🌗\n🌓🌓🌓🌓🌓\n🌗🌗🌗🌗🌗\n🌓🌓🌓🌓🌓\n🌗🌗🌗🌗🌗",
+        "🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘",
+        "🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑",
+        "🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒",
+        "🌓🌓🌓🌓🌓\n🌓🌓🌓🌓🌓\n🌓🌓🌓🌓🌓\n🌗🌗🌗🌗🌗\n🌓🌓🌓🌓🌓",
+        "🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔\n🌘🌘🌘🌘🌘\n🌔🌔🌔🌔🌔",
+        "🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕\n🌑🌑🌑🌑🌑\n🌕🌕🌕🌕🌕",
+        "🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖\n🌒🌒🌒🌒🌒\n🌖🌖🌖🌖🌖",
+    ]
 
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 8])
 
-@kgbot.on(admin_cmd(pattern=r"moon"))
 
+@kgbot.on(admin_cmd(pattern=r"moon"))
 async def _(event):
     if event.fwd_from:
         return
@@ -86,39 +91,39 @@ async def _(event):
     animation_ttl = range(0, 33)
     await event.edit("moon")
     animation_chars = [
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖"
-        ]
+        "🌗",
+        "🌘",
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌖",
+        "🌗",
+        "🌘",
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌖",
+        "🌗",
+        "🌘",
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌖",
+        "🌗",
+        "🌘",
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌖",
+    ]
 
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)

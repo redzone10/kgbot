@@ -27,7 +27,7 @@ thundername = Var.CUSTOM_STICKER_PACK_NAME
 @kgbot.on(admin_cmd(outgoing=True, pattern="kang"))
 @kgbot.on(sudo_cmd(pattern="kang", allow_sudo=True))
 async def kang(args):
-    """ For .kang command, kangs stickers or creates new ones. """
+    """For .kang command, kangs stickers or creates new ones."""
     user = await bot.get_me()
     if not user.username:
         user.username = user.first_name
@@ -255,7 +255,7 @@ async def kang(args):
 
 
 async def resize_photo(photo):
-    """ Resize the given photo to 512x512 """
+    """Resize the given photo to 512x512"""
     image = Image.open(photo)
     maxsize = (512, 512)
     if (image.width and image.height) < 512:

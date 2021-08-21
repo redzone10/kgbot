@@ -1,7 +1,8 @@
 #    kgbot by kgproject1010
 
 #    This program is licensed under GNU Affero General Public License.
-#    You cannot use it, or edit it before asking Team kgproject1010, otherwise we can take any actions against you.
+# You cannot use it, or edit it before asking Team kgproject1010,
+# otherwise we can take any actions against you.
 
 
 from telethon.tl.types import Channel

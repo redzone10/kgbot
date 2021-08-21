@@ -6,7 +6,6 @@ from kgbot.kgbotConfig import Var
 from kgbot.utils import load_module, start_mybot, load_pmbot
 from pathlib import Path
 import telethon.utils
-from kgbot import CMD_HNDLR
 
 THUND = Var.PRIVATE_GROUP_ID
 BOTNAME = Var.TG_BOT_USER_NAME_BF_HER
@@ -63,9 +62,10 @@ logo = """
 ███████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
 
-                                                           
+
 
 """
+
 
 async def add_bot(bot_token):
     await bot.start(bot_token)

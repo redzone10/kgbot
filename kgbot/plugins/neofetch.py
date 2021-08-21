@@ -1,8 +1,7 @@
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
+
 from kgbot import CMD_HELP
-import os
-import asyncio
 
 
 @kgbot.on(admin_cmd(outgoing=True, pattern="neofetch"))
@@ -20,11 +19,9 @@ async def neofetchdetails(neofetch):
 
             await neofetch.edit("`" + result + "`")
         except FileNotFoundError:
-            await neofetch.edit("`Neofetch Not Found.. Please Install The Latest Version Of kgbot Or Get Help From Support Group` @kgbot")
+            await neofetch.edit(
+                "`Neofetch Not Found.. Please Install The Latest Version Of kgbot Or Get Help From Support Group` @kgbot"
+            )
 
 
-CMD_HELP.update(
-    {
-        "neofetch": "➟ `.neofetch`\nUse - Neofetch"
-    }
-)
+CMD_HELP.update({"neofetch": "➟ `.neofetch`\nUse - Neofetch"})

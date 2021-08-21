@@ -71,7 +71,5 @@ async def list(ups):
 
 
 CMD_HELP.update(
-    {
-        "currency": ".currency <value> <from> <to>\nUse - To convert currency."
-    }
+    {"currency": ".currency <value> <from> <to>\nUse - To convert currency."}
 )

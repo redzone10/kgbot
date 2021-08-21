@@ -46,7 +46,7 @@ if bool(ENV):
             format="✘ %(asctime)s ✘ - ⫸ %(name)s ⫷ - ⛝ %(levelname)s ⛝ - ║ %(message)s ║",
             level=INFO)
     LOGS = getLogger(__name__)
-    
+
     CONFIG_CHECK = os.environ.get(
         "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
 
@@ -66,7 +66,6 @@ if bool(ENV):
     # Userbot logging feature switch.
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
 
-    
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
     # Console verbose logging

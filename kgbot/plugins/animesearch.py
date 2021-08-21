@@ -12,19 +12,19 @@ async def _(event):
     searchthund = await event.reply("Searching Your Anime")
     inptstr = input_str.split(":", 1)
     try:
-       site = inptstr[1]
-    except:
-       site = "Twist.moe"
-       await event.reply("Searching from default website.")
+        site = inptstr[1]
+    except BaseException:
+        site = "Twist.moe"
+        await event.reply("Searching from default website.")
 
     strzerooo = inptstr[0]
     chichidoyouloveme = site.lower()
 
     Twist = get_anime_class(chichidoyouloveme)
     try:
-       search = Twist.search(strzerooo)
-    except:
-       await searchthund.edit("Error 404 Site is down.")
+        search = Twist.search(strzerooo)
+    except BaseException:
+        await searchthund.edit("Error 404 Site is down.")
 
     title1 = search[0].title
     url1 = search[0].url

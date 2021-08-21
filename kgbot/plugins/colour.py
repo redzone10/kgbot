@@ -1,8 +1,10 @@
-from telethon import events
 import os
+
 from PIL import Image, ImageColor
-from kgbot.utils import admin_cmd
+
 from kgbot import CMD_HELP
+from kgbot.utils import admin_cmd
+
 
 @kgbot.on(admin_cmd(pattern="color (.*)"))
 async def _(event):
@@ -27,14 +29,12 @@ async def _(event):
                 "Mycolour.png",
                 force_document=False,
                 caption=input_str,
-                reply_to=message_id
+                reply_to=message_id,
             )
             os.remove("Mycolour.png")
             await event.delete()
     else:
         await event.edit("Syntax: `.color <color_code>`")
-CMD_HELP.update(
-    {
-        "colour": "➟ `.colour <colourcode>`"
-    }
-)
+
+
+CMD_HELP.update({"colour": "➟ `.colour <colourcode>`"})

@@ -1,6 +1,8 @@
 import asyncio
-from kgbot.utils import admin_cmd
+
 from kgbot import CMD_HELP
+from kgbot.utils import admin_cmd
+
 
 @kgbot.on(admin_cmd(pattern="type (.*)"))
 async def _(event):
@@ -26,17 +28,12 @@ async def _(event):
             await event.edit(typing_text)
         except Exception as e:
             logger.warn(str(e))
-            pass
         await asyncio.sleep(DELAY_BETWEEN_EDITS)
         try:
             await event.edit(previous_text)
         except Exception as e:
             logger.warn(str(e))
-            pass
         await asyncio.sleep(DELAY_BETWEEN_EDITS)
 
-CMD_HELP.update(
-    {
-        "type": "➟ `.type <your message>` \nUse - Type Type Type"
-    }
-)
+
+CMD_HELP.update({"type": "➟ `.type <your message>` \nUse - Type Type Type"})

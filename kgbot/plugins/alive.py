@@ -9,11 +9,7 @@ from kgbot import ALIVE_NAME, CMD_HELP, thunderversion
 from kgbot.__init__ import StartTime
 from kgbot.kgbotConfig import Config, Var
 
-CUSTOM_ALIVE = (
-    Var.CUSTOM_ALIVE
-    if Var.CUSTOM_ALIVE
-    else "Hello! I am stably alive!!"
-)
+CUSTOM_ALIVE = Var.CUSTOM_ALIVE if Var.CUSTOM_ALIVE else "Hello! I am stably alive!!"
 ALV_PIC = Var.ALIVE_PIC if Var.ALIVE_PIC else None
 alivemoji = Var.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "⚡️"
 if Config.SUDO_USERS:
@@ -65,14 +61,14 @@ async def ifiamalive(alive):
     if ALV_PIC:
         thundrgang = f"**⚡️This is kgbot⚡️**\n\n"
         thundrgang += f"`{CUSTOM_ALIVE}`\n\n"
-        thundrgang += (
-            f"{alivemoji} **Telethon version**: `1.17`\n{alivemoji} **Python**: `3.9.2`\n"
-        )
+        thundrgang += f"{alivemoji} **Telethon version**: `1.17`\n{alivemoji} **Python**: `3.9.2`\n"
         thundrgang += f"{alivemoji} **kgbot Version**: `{thunderversion}`\n"
         thundrgang += f"{alivemoji} **More Info**: @kgbot\n"
         thundrgang += f"{alivemoji} **Sudo** : `{sudo}`\n"
         thundrgang += f"{alivemoji} **kgbot Uptime**: `{uptime}`\n"
-        thundrgang += f"{alivemoji} **Database Status**: `Everything Stable As Lightning⚡️⚡️`\n"
+        thundrgang += (
+            f"{alivemoji} **Database Status**: `Everything Stable As Lightning⚡️⚡️`\n"
+        )
         thundrgang += (
             f"{alivemoji} **My master** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
         )
@@ -80,7 +76,9 @@ async def ifiamalive(alive):
         await alive.get_chat()
         await alive.delete()
         """ For .alive command, check if the bot is running.  """
-        await borg.send_file(alive.chat_id, ALV_PIC, caption=thundrgang, link_preview=False)
+        await borg.send_file(
+            alive.chat_id, ALV_PIC, caption=thundrgang, link_preview=False
+        )
         await alive.delete()
         return
     req = requests.get("https://telegra.ph/file/9f55c22fe80a283d6c0fb.png")

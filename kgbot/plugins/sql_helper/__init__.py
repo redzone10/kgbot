@@ -5,7 +5,6 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from kgbot.kgbotConfig import Var
 
 
-
 def start() -> scoped_session:
     engine = create_engine(Var.DB_URI)
     BASE.metadata.bind = engine

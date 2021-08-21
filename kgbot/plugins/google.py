@@ -15,7 +15,7 @@ def progress(current, total):
 
 @kgbot.on(admin_cmd(outgoing=True, pattern="go (.*)"))
 async def gsearch(q_event):
-    """ For .google command, do a Google search. """
+    """For .google command, do a Google search."""
     match = q_event.pattern_match.group(1)
     thundrgang = await eor(q_event, "Searching for `{}`".format(match))
     page = findall(r"page=\d+", match)

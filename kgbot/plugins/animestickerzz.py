@@ -51,4 +51,6 @@ async def waifu(animu):
     await animu.delete()
 
 
-CMD_HELP.update({"animestickerzz": "`.waifu` : Anime stickers with your thoughts and messages."})
+CMD_HELP.update(
+    {"animestickerzz": "`.waifu` : Anime stickers with your thoughts and messages."}
+)

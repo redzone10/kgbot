@@ -3,6 +3,7 @@ import os
 import random
 import re
 import urllib
+
 import requests
 from telethon.tl import functions
 
@@ -35,7 +36,7 @@ async def waifupp():
         )
 
     r = requests.get(fy, allow_redirects=True)
-    open('kgbotautopic.jpg', 'wb').write(r.content)
+    open("kgbotautopic.jpg", "wb").write(r.content)
 
 
 @kgbot.on(admin_cmd(pattern="waifupfp"))
@@ -55,5 +56,7 @@ async def main(event):
 
 
 CMD_HELP.update(
-    {"waifudp": "➟ `.waifupic`\nRandomly Selects A Waifu Pic And Sets As Your Profile Picture.."}
+    {
+        "waifudp": "➟ `.waifupic`\nRandomly Selects A Waifu Pic And Sets As Your Profile Picture.."
+    }
 )

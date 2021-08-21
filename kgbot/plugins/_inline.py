@@ -1,7 +1,8 @@
 #    kgbot by kgproject1010
 
 #    This program is licensed under GNU Affero General Public License.
-#    You cannot use it, or edit it before asking Team kgproject1010, otherwise we can take any actions against you.
+# You cannot use it, or edit it before asking Team kgproject1010,
+# otherwise we can take any actions against you.
 
 import asyncio
 import html
@@ -13,8 +14,8 @@ from telethon import Button, custom, events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 from kgbot import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
-from kgbot.plugins import thundrstats
 from kgbot.kgbotConfig import Var
+from kgbot.plugins import thundrstats
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 THUNDRPIC = (

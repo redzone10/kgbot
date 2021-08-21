@@ -1,7 +1,6 @@
-import asyncio
-from telethon import events
-from kgbot.utils import admin_cmd
 from kgbot import CMD_HELP
+from kgbot.utils import admin_cmd
+
 
 @kgbot.on(admin_cmd("support"))
 async def support(event):
@@ -12,7 +11,8 @@ async def support(event):
         "•[Channel](https://t.me/rakasupport)\n"
         "•[Support Group](https://t.me/KGSupporrgroup)\n"
         "•[Owner](https://t.me/kgbot)\n"
-)
+    )
+
 
 @kgbot.on(admin_cmd("docs"))
 async def docs(event):
@@ -21,7 +21,8 @@ async def docs(event):
         "•[Docs](https://kgproject1010.gitbook.io/kgbot/)\n"
         "•[Youtube Tutorial](https://youtu.be/7530SjgsgW4)\n"
         "•[Repo](https://github.com/kgproject1010/kgbot)\n"
-)
+    )
+
 
 CMD_HELP.update(
     {

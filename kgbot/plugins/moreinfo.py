@@ -1,6 +1,7 @@
-import asyncio
 from telethon.errors.rpcerrorlist import YouBlockedUserError
+
 from kgbot import CMD_HELP
+
 bot = "@tgscanrobot"
 
 
@@ -26,8 +27,7 @@ async def _(event):
         except YouBlockedUserError:
             await ok.edit("**Error**\n `Unblock` @tgscanrobot `and try again!")
 
+
 CMD_HELP.update(
-    {
-        "moreinfo": "➟ `.moreinfo` <userid/username>\nUse - Gets More information"
-    }
+    {"moreinfo": "➟ `.moreinfo` <userid/username>\nUse - Gets More information"}
 )

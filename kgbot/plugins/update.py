@@ -1,7 +1,7 @@
-  
 import os
 import sys
-from kgbot import CMD_HELP, CMD_HNDLR
+
+from kgbot import CMD_HELP
 from kgbot.utils import admin_cmd
 
 
@@ -16,8 +16,5 @@ async def _(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
-CMD_HELP.update(
-    {
-        "update": "`.update`\nUse - Updates Your kgbot."
-    }
-)
+
+CMD_HELP.update({"update": "`.update`\nUse - Updates Your kgbot."})
