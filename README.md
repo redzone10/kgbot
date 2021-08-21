@@ -30,7 +30,7 @@ Best UserBot To Manage Your Telegram Account
 
 ## Deploy kgbot To Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kgproject1010/kgbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kgproject1010/kgbotheroku6)
 
 
 ## Telegram String-Session Generator By kgproject1010™
