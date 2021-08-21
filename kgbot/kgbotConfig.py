@@ -1,5 +1,19 @@
-# kgbot by kgproject1010
+#    kgbot - kgbot
+#    Copyright (C) 2020 kgbot
 
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
 import os
 from telethon.tl.types import ChatBannedRights
 
@@ -8,6 +22,7 @@ ENV = bool(os.environ.get("ENV", False))
 
 class Var(object):
     APP_ID = int(os.environ.get("APP_ID", 6))
+    # 6 is a placeholder
     API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
@@ -15,29 +30,30 @@ class Var(object):
     LOGGER = True
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
-    # For Credits In Upcoming Updates As kgbot Owner, Devs and Support Team
+    # Here for later purposes
     SUDO_USERS = set(
         int(x) for x in os.environ.get(
-            "SUDO_USERS", "").split())
+            "SUDO_USERS",
+            "1097131648").split())
     WHITELIST_USERS = set(
         int(x) for x in os.environ.get(
             "WHITELIST_USERS",
-            "1344584512").split())
+            "832241419").split())
     BLACKLIST_USERS = set(
         int(x) for x in os.environ.get(
             "BLACKLIST_USERS", "").split())
     DEVLOPERS = set(
         int(x) for x in os.environ.get(
             "DEVLOPERS",
-            "1261589721").split())
-    THUNDER_OWNER = set(
+            "953414679").split())
+    OWNER_ID = set(
         int(x) for x in os.environ.get(
-            "THUNDER_OWNER",
-            "1524091402").split())
+            "OWNER_ID",
+            "719195224").split())
     SUPPORT_USERS = set(
         int(x) for x in os.environ.get(
             "SUPPORT_USERS", "").split())
-    # VARS
+    # custom vars
     ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
     CUSTOM_ALIVE = os.environ.get("CUSTOM_ALIVE", None)
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
@@ -61,11 +77,11 @@ class Var(object):
     PMSECURITY = os.environ.get("PMSECURITY", "ON")
     CMD_HNDLR = os.environ.get("CMD_HNDLR", r"\.")
     SUDO_HNDLR = os.environ.get("SUDO_HNDLR", r"\!")
-    # Autopic
+    # for autopic
     AUTOPIC_TEXT = os.environ.get(
         "AUTOPIC_TEXT",
-        "Autopic.\n kgbot by kgproject1010.")
-    AUTO_PIC_FONT = os.environ.get("AUTOPIC_FONT", "kgproject1010font.ttf")
+        "Life Is too Short.\n And so is your TG account.")
+    AUTO_PIC_FONT = os.environ.get("AUTOPIC_FONT", "DejaVuSans.ttf")
     AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", None)
     if AUTH_TOKEN_DATA is not None:
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -79,7 +95,7 @@ class Var(object):
             PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
         except ValueError:
             raise ValueError(
-                "Invalid Private Group ID. Make sure the ID starts with -100.")
+                "Invalid Private Group ID. Make sure your ID is starts with -100 and make sure that it is only numbers.")
 
 
 class Development(Var):
@@ -97,12 +113,15 @@ if ENV:
         # http://api.screenshotlayer.com/api/capture
         SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get(
             "SCREEN_SHOT_LAYER_ACCESS_KEY", None)
+        # Send .get_id in any channel to fill this value. ReQuired for
+        # @Manuel15 inspiration to work!
         PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get(
-            "PRIVATE_CHANNEL_BOT_API_ID", -1001260773779))
+            "PRIVATE_CHANNEL_BOT_API_ID", -100123456789))
         # This is required for the plugins involving the file system.
         TMP_DOWNLOAD_DIRECTORY = os.environ.get(
             "TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
-        # This is required for the speech to text module. Get your username from below link
+        # This is required for the speech to text module. Get your USERNAME
+        # from
         # https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
         IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
         IBM_WATSON_CRED_PASSWORD = os.environ.get(
@@ -112,13 +131,13 @@ if ENV:
             "HASH_TO_TORRENT_API", "https://example.com/torrent/{}")
         # This is required for the @telegraph functionality.
         TELEGRAPH_SHORT_NAME = os.environ.get(
-            "TELEGRAPH_SHORT_NAME", "kgbot")
+            "TELEGRAPH_SHORT_NAME", "TeleBot")
         # Get a Free API Key from OCR.Space
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         # Send .get_id in any group with all your administration bots (added)
         G_BAN_LOGGER_GROUP = int(os.environ.get(
-            "G_BAN_LOGGER_GROUP", -1001260773779))
-        # TG API limit. An album can have maximum 10 media!
+            "G_BAN_LOGGER_GROUP", -100123456789))
+        # TG API limit. An album can have atmost 10 media!
         GOOGLE_SEARCH_COUNT_LIMIT = int(
             os.environ.get("GOOGLE_SEARCH_COUNT_LIMIT", 9))
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
@@ -189,10 +208,9 @@ if ENV:
         TEMP_DIR = os.environ.get("TEMP_DIR", None)
         CHANNEL_ID = int(os.environ.get("CHANNEL_ID", -100))
         # Google Chrome Stuff
-        CHROME_BIN = os.environ.get(
-            "CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
+        CHROME_BIN = os.environ.get("CHROME_BIN", "/usr/bin/google-chrome")
         CHROME_DRIVER = os.environ.get(
-            "CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver")
+            "CHROME_DRIVER", "/usr/bin/chromedriver")
         # Google Drive ()
         G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
         G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
@@ -211,11 +229,15 @@ if ENV:
         TAG_LOG = os.environ.get("TAG_LOG", None)
         # PMSECURITY
         MAX_SPAM = int(os.environ.get("MAX_SPAM", 3))
-        MASSFBAN_GROUP_ID = os.environ.get("MASSFBAN_GROUP_ID", None)
-        if MASSFBAN_GROUP_ID:
-            MASSFBAN_GROUP_ID = int(MASSFBAN_GROUP_ID)
-        ALL_FEDS = os.environ.get("ALL_FEDS", None)
+        # Lydia API
+        LYDIA_API = os.environ.get("LYDIA_API", None)
+        GITA_CLIENT_ID = os.environ.get("GITA_CLIENT_ID", None)
+        GITA_CLIENT_SECRET = os.environ.get("GITA_CLIENT_SECRET", None)
+        FBAN_GROUP_ID = os.environ.get("FBAN_GROUP_ID", None)
+        if FBAN_GROUP_ID:
+            FBAN_GROUP_ID = int(FBAN_GROUP_ID)
+        EXCLUDE_FED = os.environ.get("EXCLUDE_FED", None)
 else:
     class Config(object):
         DB_URI = None
-        # If you have any extra vars then add here
+        # Add your extra vars if any here
