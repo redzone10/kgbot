@@ -64,4 +64,4 @@ RUN mkdir /root/kgbot/bin/
 WORKDIR /root/kgbot/
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
-CMD ["bash","./Extras/startup.sh"]
+CMD ["bash","./resources/startup.sh"]
