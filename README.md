@@ -24,7 +24,7 @@ Repo Yang Dibuat Oleh [KG](https://t.me/knsgnwn)
 
 
 ## DEPLOY TO HEROKU <img src="./resources/extras/KGpurple.gif" width="40px">
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/kgproject1010/kgbot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kgproject1010/kgbotheroku)
 
 
   <b>© Credits</b></summary>
